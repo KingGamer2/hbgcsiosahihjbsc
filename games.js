@@ -221,4 +221,14 @@ const cuttweet = [
   console.log('[id] Send By: ' + message.author.username)
     }
 });
+client.on ("guildMemberAdd", member => {
+  
+   var role = member.guild.roles.find ("name", "{♡MembeR☆}");
+   member.addRole (role);
+  
+})
+
+client.on ("guildMemberRemove", member => {
+   
+})
 client.login(process.env.BOT_TOKEN);
